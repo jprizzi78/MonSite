@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le guide du Piémont culinaire</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .dish-card img {
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .dish-card img:hover {
+            transform: scale(1.05);
+        }
+        h1, h2 {
+            color: #8B0000; /* Rouge foncé pour les titres */
+        }
+        .card-title {
+            text-decoration: underline;
+            color: #D2691E; /* Brun orangé pour mettre en valeur les plats */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,34 +47,83 @@
     </header>
     
     <main class="container mt-4">
-        <section class="mt-5">
-            <h1 class="text-center">La Cuisine Piémontaise : Un Héritage de Saveurs et de Raffinement</h1>
-            <p class="text-justify">
-                La cuisine piémontaise est l’une des plus riches et raffinées d’Italie, influencée par son terroir et son histoire. 
-                Cette région bénéficie d’une gastronomie authentique, combinant produits du terroir, fromages savoureux, truffes d’exception et vins prestigieux.
-            </p>
+        <section>
+            <h1 class="text-center">La Cuisine Piémontaise : Un Héritage de Saveurs</h1>
+            <p class="text-center">Découvrez les plats emblématiques du Piémont, une région réputée pour ses produits d’exception et son amour du goût.</p>
             
-            <div class="mt-4 text-center">
-                <h2>Bagna Cauda</h2>
-                <p>Une sauce chaude à base d’ail, d’anchois et d’huile d’olive, servie avec des légumes crus ou cuits.</p>
-                <img class="img-fluid rounded shadow d-block mx-auto" src="images/Bagna_cauda.jpg" alt="Bagna Cauda, sauce chaude piémontaise">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card dish-card">
+                        <img src="images/Bagna_cauda.jpg" class="card-img-top" alt="Bagna Cauda" onclick="openModal(this)">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bagna Cauda</h5>
+                            <p class="card-text">Une sauce chaude à base d’ail, d’anchois et d’huile d’olive, servie avec des légumes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card dish-card">
+                        <img src="images/Agnolotti_al_plin.jpg" class="card-img-top" alt="Agnolotti al Plin" onclick="openModal(this)">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Agnolotti del Plin</h5>
+                            <p class="card-text">Petites ravioles farcies à la viande, servies avec du beurre et de la sauge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card dish-card">
+                        <img src="images/Brasato_barolo.jpg" class="card-img-top" alt="Brasato al Barolo" onclick="openModal(this)">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Brasato al Barolo</h5>
+                            <p class="card-text">Bœuf mijoté lentement dans du vin Barolo avec des herbes et épices.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="mt-4 text-center">
-                <h2>Agnolotti del Plin</h2>
-                <p>Petites ravioles farcies à la viande (veau, porc ou lapin), servies avec du beurre et de la sauge.</p>
-                <img class="img-fluid rounded shadow d-block mx-auto" src="images/Agnolotti_al_plin.jpg" alt="Agnolotti al Plin, raviolis piémontais">
+
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card dish-card">
+                        <img src="images/Panissa.jpg" class="card-img-top" alt="Panissa" onclick="openModal(this)">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Panissa</h5>
+                            <p class="card-text">Risotto typique du nord du Piémont avec du riz, haricots, lard et saucisse.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card dish-card">
+                        <img src="images/Tajarin al Tartufo.jpg" class="card-img-top" alt="Tajarin al Tartufo" onclick="openModal(this)">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tajarin al Tartufo</h5>
+                            <p class="card-text">Fines pâtes aux œufs servies avec une sauce au beurre et truffe blanche d'Alba.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card dish-card">
+                        <img src="images/Bonet.jpg" class="card-img-top" alt="Bonet" onclick="openModal(this)">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bonet</h5>
+                            <p class="card-text">Dessert à base de cacao, amaretti, œufs et rhum, souvent comparé à un flan.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="mt-4 text-center">
-                <h2>Brasato al Barolo</h2>
-                <p>Un plat où la viande de bœuf mijote lentement dans du vin Barolo, accompagné d’herbes et d’épices.</p>
-                <img class="img-fluid rounded shadow d-block mx-auto" src="images/Brasato_barolo.jpg" alt="Brasato al Barolo, bœuf mijoté au vin">
-            </div>
-            
-            <p class="mt-4">
-                Grâce à sa cuisine généreuse et son amour pour les produits de qualité, le Piémont s’impose comme une destination incontournable pour les gourmets.
-            </p>
+
+
+            <h2 class="text-center mt-5">Les Vins Piémontais à Découvrir</h2>
+            <p class="text-center">Le Piémont est célèbre pour ses vins d’exception, parfaits pour accompagner ses spécialités culinaires.</p>
+            <ul class="list-group mt-3">
+                <li class="list-group-item"><strong>Barolo :</strong> Un vin rouge puissant et élégant.</li>
+                <li class="list-group-item"><strong>Barbaresco :</strong> Un vin raffiné, souvent comparé au Barolo.</li>
+                <li class="list-group-item"><strong>Moscato d’Asti :</strong> Un vin blanc pétillant doux, idéal pour le dessert.</li>
+            </ul>
         </section>
     </main>
     
@@ -64,5 +132,25 @@
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function openModal(imgElement) {
+            var imgSrc = imgElement.src;
+            document.getElementById("modalImage").src = imgSrc;
+            var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        }
+    </script>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img id="modalImage" class="img-fluid" src="" alt="Agrandissement de l'image">
+            </div>
+        </div>
+    </div>
+</div>
+    
 </body>
 </html>
