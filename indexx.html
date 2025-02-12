@@ -5,55 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le guide du Piémont</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Hero Banner */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background: url('images/background.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .navbar .nav-link {
+            color: white !important;
+        }
+        .navbar .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #111;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Le guide du Piémont</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="indexx.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="culinaire.html">Spécialités culinaires</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tourisme.html">Tourisme</a></li>
-                        <li class="nav-item"><a class="nav-link" href="histoire.html">Histoire</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="indexx.html">Le guide du Piémont</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="culinaire.html">Spécialités culinaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tourisme.html">Tourisme</a></li>
+                    <li class="nav-item"><a class="nav-link" href="histoire.html">Histoire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Découvrez le Piémont</h1>
+            <p>Entre montagnes majestueuses, villages pittoresques et gastronomie raffinée</p>
+            <a href="tourisme.html" class="btn btn-light mt-3">Explorer</a>
+        </div>
+    </section>
+
+    <!-- Section Présentation -->
+    <section class="section text-center">
+        <div class="container">
+            <h2 class="mb-4">Une région au patrimoine exceptionnel</h2>
+            <p class="lead">Situé dans le nord-ouest de l’Italie, le Piémont est une terre d’histoire, de culture et de traditions. Entre ses paysages montagneux et ses villes élégantes, il offre une expérience unique à chaque visiteur.</p>
+        </div>
+    </section>
+
+    <!-- Section Highlights -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Turin.jpg" class="card-img-top" alt="Turin">
+                        <div class="card-body">
+                            <h5 class="card-title">Turin</h5>
+                            <p class="card-text">La capitale du Piémont, avec ses palais baroques, musées et cafés historiques.</p>
+                            <a href="tourisme.html" class="btn btn-primary">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Vin01.jpg" class="card-img-top" alt="Vignobles du Piémont">
+                        <div class="card-body">
+                            <h5 class="card-title">Vignobles du Piémont</h5>
+                            <p class="card-text">Berceau des célèbres vins Barolo et Barbaresco, une visite incontournable.</p>
+                            <a href="culinaire.html" class="btn btn-primary">Explorer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Orta01.jpg" class="card-img-top" alt="Lac d'Orta">
+                        <div class="card-body">
+                            <h5 class="card-title">Lac d'Orta</h5>
+                            <p class="card-text">Un joyau naturel, parfait pour une escapade romantique et culturelle.</p>
+                            <a href="tourisme.html" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    
-    <main class="container mt-4">
-        <section class="mt-5">
-            <h1 class="text-center text-primary">Le Piémont</h1>
-            <p class="text-justify">
-                Situé dans le nord-ouest de l’Italie, le Piémont est une région frontalière de la France et de la Suisse, entourée par les majestueuses Alpes qui couvrent une grande partie de son territoire. 
-                Son nom, qui signifie "au pied des montagnes", reflète parfaitement sa topographie spectaculaire, alternant vallées verdoyantes, vignobles renommés et sommets enneigés.
-            </p>
-            <div class="text-center">
-                <img class="img-fluid rounded shadow d-block mx-auto" src="images/Village_01.jpg" alt="Paysage du Piémont">
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="mt-4">
-            <p class="text-justify">
-                Capitale de la région, Turin est une ville élégante au riche passé industriel et culturel, célèbre pour son architecture baroque, son patrimoine historique et son rôle central dans l’unification de l’Italie. 
-                Réputé pour sa gastronomie et ses vins prestigieux, tels que le Barolo et le Barbaresco, le Piémont est une destination de choix pour les amateurs de nature, d’histoire et de traditions culinaires.
-            </p>
-            <div class="text-center">
-                <img class="img-fluid rounded shadow d-block mx-auto" src="images/background.jpg" alt="Paysage du Piémont">
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2025 Le guide du Piémont - Tous droits réservés.</p>
+            <div class="social-icons">
+                <a href="contact.html"><i class="fab fa-facebook"></i></a>
+                <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                <a href="contact.html"><i class="fab fa-twitter"></i></a>
             </div>
-        </section>
-    </main>
-    
-    <footer class="bg-dark text-white text-center p-3 mt-4">
-        <p>&copy; 2025 Le guide du Piémont - Tous droits réservés.</p>
+        </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
